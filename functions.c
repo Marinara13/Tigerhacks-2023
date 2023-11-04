@@ -40,8 +40,7 @@ void mainChoice(position current) {
             audition(current);
             break;
         case 2:
-            *(current.fame) += 10;
-            printf("you have gained some fame\n");
+            network(current);
             break;
         case 3:
             *(current.luck) += 10;
