@@ -4,8 +4,12 @@
 int main (void)
 {
     position player = storyIntro();
-    while (*(current.age) != 40) {
-        printStats();
-        mainChoice();
+    if(player.ec ==0){
+        printf("cool\n");
     }
+    //while (*(current.age) != 22) {
+      //  printStats();
+        //mainChoice();
+    //}
 }
+
