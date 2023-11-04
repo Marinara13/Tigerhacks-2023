@@ -1,5 +1,5 @@
 #include "header.h"
-#include "print.c"
+#include "functions.c"
 
 int main (void)
 {
