@@ -3,7 +3,7 @@
 
 // creates the starting set up for the player
 // -1 means malloc failed (shouldn't happen) 
-position createChar(){
+position createPlayer(){
 
     position character;
     option * opts = malloc(sizeof(option));
