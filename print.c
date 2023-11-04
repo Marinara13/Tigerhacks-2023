@@ -19,6 +19,8 @@ position createPlayer(){
     }
 
     *age = 18;
+    *luckCounter = 1;
+    *luck = setluck(player);
     player.opts = opts;
     player.action = action;
     player.luck = luck;
