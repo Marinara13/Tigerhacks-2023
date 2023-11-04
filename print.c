@@ -28,6 +28,7 @@ position createPlayer(){
     player.fame = fame;
     player.networth = networth;
     player.luckCounter = luckCounter;
+    scanf("%s",&player.name)
     *(player.luckCounter) = 1;
     
     return player;
