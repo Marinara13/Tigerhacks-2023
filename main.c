@@ -3,8 +3,7 @@
 
 int main (void)
 {
-    createPlayer();
-    storyIntro();
+    position player = storyIntro();
     while (*(current.age) != 40) {
         printStats();
         mainChoice();
