@@ -31,4 +31,6 @@ void choice3(position current);
 void choice4(position current);
 void freePositon(position current);
 void printStats(position current);
+void audition(position current);
+void mainChoic(position current);
 int setLuck(position current);
