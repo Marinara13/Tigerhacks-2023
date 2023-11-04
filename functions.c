@@ -3,6 +3,9 @@
 
 // creates the starting set up for the player
 // -1 means malloc failed (shouldn't happen) 
+position storyIntro()
+{
+}
 position createPlayer(){
 
     position player;
