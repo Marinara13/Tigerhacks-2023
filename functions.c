@@ -1,19 +1,24 @@
 #include "header.h"
 
 void ending(position current) {
-    if (current.fame >= 9000 && current.networth >= 100000000) {
-        printf("You made it big! You are well renowned, and are able to retire with a well padded savings account. You have become the main star of many peoples’ favorite movies, and there is not a television screen in the world that has not aired your beautiful wealthy face.\n");
+    if (*(current.fail) == 1) {
+        printf("You are worthless. Your attempts at stardom have led you nowhere. Now, you are but a husk of an actor. An empty promise. You work the rest of your life in a pizza place, and you get barely any sleep at night because your head is full of regret.\n");
     }
-    else if (current.fame >= 2500 && current.networth >= 100000000) {
-        printf("Congratulations, Mr. Moneybags! You have earned enough in your career to sustain you through the rest of your life. While you didn’t make the biggest splash in the cinemas, you will certainly be content in your gold-plated private jet.\n");
-    }
-    else if (current.fame >= 9000 && current.networth >= 1000000) {
-        printf("Hooray! You are now the biggest name on the face of the earth. You now have your own show called “Keeping up with %s”. You can’t even step outside before being blinded by the flashing lights of a few dozen paparazzi.\n", current.name);
-    }
-    else if (current.fame >= 2500 && current.networth >= 1000000) {
-        printf("You fought tooth and nail to reach your dreams of becoming a superstar. However, you fell just short of anything more than a side character. You are still able to make a decent living though, and will be comfortable for the rest of your life.\n");
-    }
-    else printf("You are worthless. Your attempts at stardom have led you nowhere. Now, you are but a husk of an actor. An empty promise. You work the rest of your life in a pizza place, and you get barely any sleep at night because your head is full of regret.\n");
+    else{
+        if (*(current.fame) >= 9000 && *(current.networth) >= 100000000) {
+            printf("You made it big! You are well renowned, and are able to retire with a well padded savings account. You have become the main star of many peoples’ favorite movies, and there is not a television screen in the world that has not aired your beautiful wealthy face.\n");
+        }
+        else if (*(current.fame) >= 2500 && *(current.networth) >= 100000000) {
+            printf("Congratulations, Mr. Moneybags! You have earned enough in your career to sustain you through the rest of your life. While you didn’t make the biggest splash in the cinemas, you will certainly be content in your gold-plated private jet.\n");
+        }
+        else if (*(current.fame) >= 9000 && *(current.networth) >= 1000000) {
+            printf("Hooray! You are now the biggest name on the face of the earth. You now have your own show called “Keeping up with %s”. You can’t even step outside before being blinded by the flashing lights of a few dozen paparazzi.\n", current.name);
+        }
+        else if (*(current.fame) >= 2500 && *(current.networth) >= 1000000) {
+            printf("You fought tooth and nail to reach your dreams of becoming a superstar. However, you fell just short of anything more than a side character. You are still able to make a decent living though, and will be comfortable for the rest of your life.\n");
+        }
+        else printf("You are worthless. Your attempts at stardom have led you nowhere. Now, you are but a husk of an actor. An empty promise. You work the rest of your life in a pizza place, and you get barely any sleep at night because your head is full of regret.\n");
+        }
 }
 
 void audition(position current){
