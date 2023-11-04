@@ -1,5 +1,45 @@
 #include "header.h"
 
+// asks the player where they start and prints corresponding message
+void location(position current)
+{
+    int holly = 10, boone = 1, ny = 7, como = 3;
+    
+    setOpt(current, "Hollywood", "Booneville, MO", "New York", "Como, baby!");
+    printOpt(current);
+    choice4(current);
+
+    switch (*(current.action))
+    {
+        case 1: // Hollywood
+            printf("What better place to start your acting career than the heart of glitz and glam, ");
+            printf("\nHollywood? The sheer amount of talent here intimidates you a bit, ");
+            printf("\nbut your’re confident in your ability to shine the brightest.\n\n");
+
+            *(current.fame) = (*(current.luck))*holly;
+            break;
+        case 2: // Booneville
+            printf("Why did you pick Booneville? This podunk town doesn’t even have a population ");
+            printf("\nof 8,000. Ah, well. It’s the hometown of Jimr, so maybe anything is possible.\n\n");
+
+            *(current.fame) = (*(current.luck))*boone;
+            break;
+        case 3: // New York
+            printf("Ah, the Big Apple! You’ve been surrounded by the hustle and bustle of ");
+            printf("\ncity life since you were young, and now you’re ready to rise above the crowd ");
+            printf("\n(hopefully in a penthouse).\n\n");
+            
+            *(current.fame) = (*(current.luck))*ny;
+            break;
+        case 4: // Como
+            printf("You grew up in Columbia, Missouri, home to the best, most spectacular and ");
+            printf("\namazing college, Mizzou! It might not be the biggest city to get your foot ");
+            printf("\nin the door, but Como’s strong sense of community may help you achieve new heights.\n\n");
+            
+            *(current.fame) = (*(current.luck))*como;
+            break;
+    }
+}
 
 // creates the starting set up for the player
 // -1 means malloc failed (shouldn't happen) 
