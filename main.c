@@ -3,8 +3,10 @@
 
 int main (void)
 {
-    
+    createPlayer();
+    storyIntro();
     while (*(current.age) != 40) {
+        printStats();
         
     }
 }
