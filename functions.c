@@ -166,7 +166,7 @@ void audition(position current) {
 void mainChoice(position current) {
     setOpt(position current, Audition, Network, Practice, asdf);
     printOpt(position current);
-    choice3();
+    choice3(position current);
     switch (current.action) {
         case 1:
             audition(position current);
