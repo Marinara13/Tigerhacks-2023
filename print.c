@@ -17,6 +17,7 @@ position createPlayer(){
     return player;
     }
 
+    *age = 18;
     player.opts = opts;
     player.action = action;
     player.luck = luck;
