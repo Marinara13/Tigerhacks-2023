@@ -4,10 +4,10 @@
 int setLuck(position current)
 {
     time_t t;
-    int counter = *(current.luckCount);
+    int counter = *(current.luckCounter);
     srand((unsigned) time(&t)*counter);
     int luck = (rand())%101;
     counter++;
-    *(current.luckCount) = counter;
+    *(current.luckCounter) = counter;
     return luck;
 }
