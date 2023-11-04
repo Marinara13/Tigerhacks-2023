@@ -206,6 +206,7 @@ void freePositon(position current){
     free(current.luckCounter);
     free(current.networth);
     free(current.action);
+    free(current.fail);
 
 }
 
