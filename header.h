@@ -18,6 +18,7 @@ typedef struct{
     int *age;
     int *fame;
     int *networth;
+    int *luckCounter;
     int ec;
 }position;
 
@@ -29,4 +30,4 @@ void choice3(position current);
 void choice4(position current);
 void freePositon(position current);
 void printStats(position current);
-int setLuck();
+int setLuck(position current);
