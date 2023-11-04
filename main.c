@@ -7,6 +7,6 @@ int main (void)
     storyIntro();
     while (*(current.age) != 40) {
         printStats();
-        
+        mainChoice();
     }
 }
