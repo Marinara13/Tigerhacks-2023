@@ -67,6 +67,81 @@ void audition(position current){
     
 }
 
+void network(position current){
+    char opt1[]=" You can spend 2000 traveling arround and prompoting yourself";
+    char opt2[]=" You get a gig to perform at a kids birthday party";
+    char opt3[]=" You apply to be on hotones but you might end up wasting your time";
+    char opt4[]=" You go with your grandma to the seinor activity center bingo night to meet some new people";
+
+
+    setOpt(current, opt1, opt2, opt3, opt4);
+    printOpt(current);
+    choice4( current);
+
+    int luck = setLuck(current);
+
+    switch (*(current.action)) {
+        case 1:
+            if(luck >= 60){
+                printf(" When you get home after traveling you find out the New York Times has made an article about you. With the title being \"Keep your eyes on this new and upcomming star %s\"\n",current.name);
+                *(current.fame) = *(current.fame) + *(current.fame);
+            }else if(luck >= 40){
+                printf("You catch so much attraction you hear you name mentioned on a radio talk show and about how snazzy you are\n");
+                *(current.fame) = *(current.fame) + (10 * ( setLuck(current) + 1));
+            }else if(luck <=10){
+                printf(" After all your traveling you realize you missed your mom's birthday\n -1 follower \n");
+                *(current.fame) = *(current.fame) - 1;
+            }else{
+                printf(" Because of inflation 2000 bucks only allowed you to stay locally but you get to meet some of your fans and add some more\n");
+                *(current.fame) = *(current.fame) + (5 * (setLuck(current)+1));
+            }
+            *(current.networth) = *(current.networth) - 2000;
+            break;
+        case 2:
+            if(luck >= 75){
+                printf("When you picked up the flyer for this gig you didn't realise you would be preforming as a clown for Kim k\n you get a healthy check but nobody could tell it was you in that red wig\n");
+                *(current.networth) = *(current.networth) + 3000;
+            }else if(luck <= 10){
+                printf("You read the wrong adrress off the flyer and when you show up it's a funeral home that has a ceremony going on, they probably don't need your services\n");
+                *(current.networth) = *(current.networth) - 30;
+            }else{
+                printf("You show up to the party and dress up as elsa. The kids are loving you and will always be a fan of yours\n");
+                *(current.networth) = *(current.networth) + 500;
+                *(current.fame) = *(current.fame) + 100;
+            }
+            
+            break;
+        case 3:
+            if(*(current.fame) > 7000){
+                if(luck >=40){
+                    printf("You're famous enough to get on hotones and they ask you plenty of spicy questions. However you crush past the ghost pepper sauce without any problems. The episode aires and it's a hit");
+                    *(current.fame) += *(current.fame)*0.3 ;
+                }else{
+                    printf("You're famous enough to get on hoteones but that can only take you so far. The first sauce it tabasco which you thought you were ready for. After one bite your face it beet red and you're hospitalized. The epsiode was never aired but the medical bills remain\n")
+                    *(current.networth) = *(current.networth) - 5000;
+                }
+            }else if(luck >= 80){
+                printf("Today is your lucky day, the next episode was supposed to feature tom holland but he got food poising and they to take your application. You crush it as you aplied after years of practacing, the epsiode doesn't get a crazy amount of attention but you'll know you were able to get on the show\n");
+                *(current.fame) += *(current.fame)*0.5 ;
+            }else{
+                printf("Your application didn't even make it to anyones desk and you waste your time waiting for a year and no response\n");
+            }
+            break;
+        case 4;
+            if(luck >= 70){
+
+                printf("You go with you grandma to bingo night and you're enjoying yourself even though your grandma is destroying you. You look off to your side and see it's the one and only Nicolas Cage! You rizz him up and get some of his contacts \n");
+                *(current.fame) += *(current.fame)*0.75 ;
+
+            }else{
+                printf("You go to bingo with your grandma every day that year, sadly nothing out of the ordinary besides winning once but maybe someone interesting might show up next year\n"){
+                *(current.fame) += *(current.fame)* 0.1 ;
+                }
+            }
+            break;
+    } 
+}
+
 void mainChoice(position current) {
     char opt1[]=" Audition for a roll";
     char opt2[]=" Go out and network ";
