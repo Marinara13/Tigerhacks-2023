@@ -26,6 +26,14 @@ typedef struct{
     int ec;
 }position;
 
+//story code
+position storyIntro();
+void location(position current);
+void audition(position current);
+void mainChoice(position current);
+
+
+//all set up code
 position createPlayer();
 void setOpt(position current,char*opt1,char*opt2,char*opt3,char*opt4 );
 void printOpt(position current);
@@ -34,9 +42,5 @@ void choice3(position current);
 void choice4(position current);
 void freePositon(position current);
 void printStats(position current);
-void audition(position current);
-void mainChoice(position current);
-position storyIntro();
 int setLuck(position current);
-void location(position current);
 #endif
