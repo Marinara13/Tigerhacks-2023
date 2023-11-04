@@ -31,6 +31,7 @@ position storyIntro();
 void location(position current);
 void audition(position current);
 void mainChoice(position current);
+void ending(position current);
 
 
 //all set up code
