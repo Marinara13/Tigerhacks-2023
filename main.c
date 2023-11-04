@@ -10,4 +10,6 @@ int main (void)
         printStats(player);
 
     }
+    ending(player);
+    freePosition(player);
 }
