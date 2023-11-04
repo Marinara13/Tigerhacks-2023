@@ -13,7 +13,7 @@ position createPlayer(){
     int * fame = malloc(sizeof(int));
     int * networth = malloc(sizeof(int));
     int * luckCounter = malloc(sizeof(int));
-    if(opts == NULL || action == NULL || luck == NULL|| age ==NULL){ 
+    if(opts == NULL || action == NULL || luck == NULL|| age ==NULL ||fame ==NULL||networth==NULL||luckCounter == NULL){ 
     player.ec=-1;
     return player;
     }
