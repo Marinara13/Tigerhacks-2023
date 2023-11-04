@@ -183,17 +183,25 @@ void mainChoice(position current) {
     setOpt(current, opt1, opt2, opt3, NULL);
     printOpt(current);
     choice3( current);
-    /*switch (current.action) {
+    switch (*(current.action)) {
         case 1:
-            audition(position current);
+            if ((*current.luck) >=90){
+                printf("you got the part +%d to networth\n",(100 * setLuck(current) * *(current.fame)));
+            }else{
+                printf("you didn't get one try again next year\n");
+            }
             break;
         case 2:
             *(current.fame) += 10;
+            printf("you have gained some fame");
             break;
         case 3:
             *(current.luck) += 10;
+            printf("Hopefully someone will see you efforts\n");
             break;
     }
-    */
+    int updateAge = *(current.age);
+    *(current.age) = updateAge + 1;
 }
+
 
