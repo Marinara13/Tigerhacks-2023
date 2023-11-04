@@ -28,4 +28,5 @@ void choice2(position current);
 void choice3(position current);
 void choice4(position current);
 void freePositon(position current);
+void printStats(position current);
 int setLuck();
