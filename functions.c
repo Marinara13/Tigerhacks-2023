@@ -9,7 +9,7 @@ void audition(position current){
 
     setOpt(current, opt1, opt2, opt3, NULL);
     printOpt(current);
-    choice3( current)
+    choice3( current);
     
     switch (*(current.action)) {
         case 1:
