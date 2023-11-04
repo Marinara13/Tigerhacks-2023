@@ -49,6 +49,8 @@ position createPlayer(){
 
 void location(position current)
 {
+    printf("First things first. Where does your journey to fame begin?\n\n");
+    
     int holly = 10, boone = 1, ny = 7, como = 3;
     
     setOpt(current, "Hollywood", "Booneville, MO", "New York", "Como, baby!");
