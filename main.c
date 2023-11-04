@@ -7,9 +7,11 @@ int main (void)
     if(player.ec ==0){
         printf("cool\n");
     }
-    //while (*(current.age) != 22) {
-      //  printStats();
-        //mainChoice();
-    //}
+
+    while (*(player.age) != 22) {
+        mainChoice(player);
+        printStats(player);
+
+    }
 }
 
