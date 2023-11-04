@@ -3,5 +3,8 @@
 
 int main (void)
 {
-    // sup
+    
+    while (*(current.age) != 40) {
+        
+    }
 }
