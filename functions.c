@@ -164,13 +164,12 @@ void audition(position current) {
 }
 
 void mainChoice(position current) {
-    *(option.opt1) = "Audition";
-    *(option.opt2) = "Network";
-    *(option.opt3) = "Practice";
+    setOpt(position current, Audition, Network, Practice, asdf);
+    printOpt(position current);
     choice3();
     switch (current.action) {
         case 1:
-            audition();
+            audition(position current);
             break;
         case 2:
             *(current.fame) += 10;
@@ -180,3 +179,4 @@ void mainChoice(position current) {
             break;
     }
 }
+
