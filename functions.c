@@ -166,10 +166,15 @@ void audition(position current) {
 }
 
 void mainChoice(position current) {
-    setOpt(position current, Audition, Network, Practice, asdf);
-    printOpt(position current);
-    choice3(position current);
-    switch (current.action) {
+    char opt1[]=" Audition for a roll";
+    char opt2[]=" Go out and network ";
+    char opt3[]=" Go to improve to practice";
+
+
+    setOpt(current, opt1, opt2, opt3, NULL);
+    printOpt(current);
+    choice3( current);
+    /*switch (current.action) {
         case 1:
             audition(position current);
             break;
@@ -180,5 +185,6 @@ void mainChoice(position current) {
             *(current.luck) += 10;
             break;
     }
+    */
 }
 
