@@ -22,6 +22,7 @@ typedef struct{
     int *fame;
     int *networth;
     int *luckCounter;
+    int *fail;
     char name[20];
     int ec;
 }position;
