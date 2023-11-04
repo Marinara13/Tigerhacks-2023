@@ -13,7 +13,7 @@ position createPlayer(){
     int * fame = malloc(sizeof(int));
     int * networth = malloc(sizeof(int));
     int * luckCounter = malloc(sizeof(int));
-    if(opts == NULL || action == NULL || luck == NULL|| age ==NULL || fame == NULL || network == NULL || luckCounter == NULL){ 
+    if(opts == NULL || action == NULL || luck == NULL|| age ==NULL){ 
     player.ec=-1;
     return player;
     }
@@ -21,7 +21,7 @@ position createPlayer(){
     *age = 18;
     *luckCounter = 1;
     player.luckCounter = luckCounter;
-    
+
     *luck = setLuck(player);
     player.opts = opts;
     player.action = action;
@@ -29,6 +29,8 @@ position createPlayer(){
     player.age = age;
     player.fame = fame;
     player.networth = networth;
+    printf("What will you superstar name be?\n");
+    scanf("%s",player.name);
     
     return player;
 
