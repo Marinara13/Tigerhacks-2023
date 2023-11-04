@@ -23,6 +23,7 @@ position createPlayer(){
     player.luckCounter = luckCounter;
 
     *luck = setLuck(player);
+    *network = 500 * (*luck);
     player.opts = opts;
     player.action = action;
     player.luck = luck;
