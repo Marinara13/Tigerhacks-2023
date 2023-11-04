@@ -12,7 +12,7 @@ position createPlayer(){
     int * age = malloc(sizeof(int));
     int * networth = malloc(sizeof(int));
     if(opts == NULL || action == NULL || luck == NULL|| age ==NULL){ 
-    character.ec=-1;
+    player.ec=-1;
     return player;
     }
 
