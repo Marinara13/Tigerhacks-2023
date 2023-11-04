@@ -158,3 +158,25 @@ int setLuck(position current)
     *(current.luckCounter) = counter;
     return luck;
 }
+
+void audition(position current) {
+
+}
+
+void mainChoice(position current) {
+    *(option.opt1) = "Audition";
+    *(option.opt2) = "Network";
+    *(option.opt3) = "Practice";
+    choice3();
+    switch (current.action) {
+        case 1:
+            audition();
+            break;
+        case 2:
+            *(current.fame) += 10;
+            break;
+        case 3:
+            *(current.luck) += 10;
+            break;
+    }
+}
