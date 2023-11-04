@@ -36,7 +36,7 @@ void freePositon(position current);
 void printStats(position current);
 void audition(position current);
 void mainChoice(position current);
-void storyIntro();
+position storyIntro();
 int setLuck(position current);
 
 #endif
