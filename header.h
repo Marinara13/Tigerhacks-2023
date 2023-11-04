@@ -38,5 +38,5 @@ void audition(position current);
 void mainChoice(position current);
 position storyIntro();
 int setLuck(position current);
-
+void location(position current);
 #endif
