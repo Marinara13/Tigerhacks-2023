@@ -3,8 +3,13 @@
 
 // creates the starting set up for the player
 // -1 means malloc failed (shouldn't happen) 
-position storyIntro()
-{
+position storyIntro(){
+
+    printf("\nLights. Camera. Action. You are an aspiring young actor, hoping one day to see your name in lights:\n\n");
+    position player = createPlayer();
+    printf("\nMaking it in showbiz ain’t easy, but with the right combination of luck and determination, \"%s\" might just be the next big thing.\n\n", player.name);
+
+    return player;
 }
 position createPlayer(){
 
@@ -26,14 +31,14 @@ position createPlayer(){
     player.luckCounter = luckCounter;
 
     *luck = setLuck(player);
-    *network = 500 * (*luck);
+    *networth = 500 * (*luck);
     player.opts = opts;
     player.action = action;
     player.luck = luck;
     player.age = age;
     player.fame = fame;
     player.networth = networth;
-    printf("What will you superstar name be?\n");
+    printf("What will your superstar name be?\n");
     scanf("%s",player.name);
     player.ec = 0;
     
