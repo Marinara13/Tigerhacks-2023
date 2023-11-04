@@ -75,6 +75,27 @@ void choice2(position current){
 
 }
 
+//asks the user to make a choice of 3 options
+void choice3(position current){
+
+    int buffer;
+    char eat;
+    printf("What choice will you make?\n");
+
+    scanf("%d",current.action);
+
+    while(*(current.action) != 1 && *(current.action) != 2 && *(current.action) != 3){
+       
+       buffer = scanf("%d",current.action);
+       printf("That is not an option try again: \n");
+       if(buffer == 0){
+        scanf("%c",&eat);
+        continue;
+       }
+    }
+
+}
+
 
 //asks the user to make a choice of 4 options
 void choice4(position current){
