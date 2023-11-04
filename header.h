@@ -32,5 +32,5 @@ void choice4(position current);
 void freePositon(position current);
 void printStats(position current);
 void audition(position current);
-void mainChoic(position current);
+void mainChoice(position current);
 int setLuck(position current);
