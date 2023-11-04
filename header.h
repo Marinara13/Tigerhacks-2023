@@ -1,3 +1,6 @@
+#ifndef _HEADER_H
+#define _HEADER_H
+
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -35,3 +38,5 @@ void audition(position current);
 void mainChoice(position current);
 void storyIntro();
 int setLuck(position current);
+
+#endif
