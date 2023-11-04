@@ -5,7 +5,7 @@
 // -1 means malloc failed (shouldn't happen) 
 position createPlayer(){
 
-    position character;
+    position player;
     option * opts = malloc(sizeof(option));
     int * action = malloc(sizeof(int));
     int * luck = malloc(sizeof(int));
@@ -13,16 +13,16 @@ position createPlayer(){
     int * networth = malloc(sizeof(int));
     if(opts == NULL || action == NULL || luck == NULL|| age ==NULL){ 
     character.ec=-1;
-    return character;
+    return player;
     }
 
-    character.opts = opts;
-    character.action = action;
-    character.luck = luck;
-    character.age = age;
-    character.networth = networth;
+    player.opts = opts;
+    player.action = action;
+    player.luck = luck;
+    player.age = age;
+    player.networth = networth;
     
-    return character;
+    return player;
 
 }
 
