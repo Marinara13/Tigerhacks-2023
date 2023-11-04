@@ -127,6 +127,11 @@ void choice4(position current){
 void freePositon(position current){
 
     free(current.opts);
+    free(current.age);
+    free(current.fame);
+    free(current.luck);
+    free(current.luckCounter);
+    free(current.networth);
     free(current.action);
 
 }
