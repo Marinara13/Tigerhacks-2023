@@ -10,6 +10,7 @@ position createPlayer(){
     int * action = malloc(sizeof(int));
     int * luck = malloc(sizeof(int));
     int * age = malloc(sizeof(int));
+    int * fame = malloc(sizeof(int));
     int * networth = malloc(sizeof(int));
     if(opts == NULL || action == NULL || luck == NULL|| age ==NULL){ 
     player.ec=-1;
@@ -20,6 +21,7 @@ position createPlayer(){
     player.action = action;
     player.luck = luck;
     player.age = age;
+    player.fame = fame;
     player.networth = networth;
     
     return player;
