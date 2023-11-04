@@ -32,6 +32,7 @@ position createPlayer(){
     player.networth = networth;
     printf("What will you superstar name be?\n");
     scanf("%s",player.name);
+    player.ec = 0;
     
     return player;
 
