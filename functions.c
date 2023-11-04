@@ -211,7 +211,28 @@ int setLuck(position current)
 }
 
 void audition(position current) {
+    printf("What film would you like to audition for?\n");
+    char opt1[]=" Indie";
+    char opt2[]=" Low Budget";
+    char opt3[]=" High Budget";
 
+    setOpt(current, opt1, opt2, opt3, NULL);
+    printOpt(current);
+    choice3(current);
+    switch (*(current.action)) {
+        case 1:
+            if () {
+            }
+            break;
+        case 2:
+            if () {
+            }
+            break;
+        case 3:
+            if () {
+            }
+            break;
+    }
 }
 
 void mainChoice(position current) {
