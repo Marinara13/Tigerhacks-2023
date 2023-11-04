@@ -1,5 +1,8 @@
 #include "header.h"
 
+void ending(position current) {
+    // sup
+}
 
 void audition(position current){
     char opt1[]=" Indie";
