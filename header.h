@@ -21,7 +21,7 @@ typedef struct{
     int ec;
 }position;
 
-position createChar();
+position createPlayer();
 void setOpt(position current,char*opt1,char*opt2,char*opt3,char*opt4 );
 void printOpt(position current);
 void choice(position current);
