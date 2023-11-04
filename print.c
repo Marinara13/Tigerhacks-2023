@@ -129,8 +129,10 @@ void freePositon(position current){
 
 //prints the current player stats
 void printStats(position current) {
+    
     printf("Age: %d\n", *(current.age));
     printf("Luck: %d\n", *(current.luck));
     printf("Fame: %d\n", *(current.fame));
     printf("Net Worth: %d\n", *(current.networth));
+    
 }
