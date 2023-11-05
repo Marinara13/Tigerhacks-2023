@@ -232,7 +232,7 @@ void network(position current){
 
     switch (*(current.action)) {
         case 1:
-            if(luck >= 60){
+            if(luck >= 80){
                 printf("When you get home after traveling, you find out the New York Times has made ");
                 printf("\nan article about you: \"Keep Your Eyes on this New and Upcoming Star: %s\"\n",current.name);
                 *(current.fame) = *(current.fame) + *(current.fame);
