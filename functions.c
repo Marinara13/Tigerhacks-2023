@@ -19,7 +19,7 @@ void ending(position current) {
         }
         else if (*(current.fame) >= 9000 && *(current.networth) >= 1000000) {
             printf("Hooray! You are now the biggest name on the face of the earth. You now have your own show ");
-            printf("called \“Keeping up with %s\”. You can’t even step outside before being blinded by the ", current.name);
+            printf("called \"Keeping up with %s\". You can’t even step outside before being blinded by the ", current.name);
             printf("\nflashing lights of a few dozen paparazzi.\n");
         }
         else if (*(current.fame) >= 2500 && *(current.networth) >= 1000000) {
