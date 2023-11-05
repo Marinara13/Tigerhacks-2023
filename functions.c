@@ -43,7 +43,7 @@ void practice(position current){
     char opt3[]=" Practice in front of a mirror at home";
 
     int luck = (setLuck(current) +*(current.luck))/2;
-    printf("How would you like to practice\n\n");
+    printf("How would you like to practice?\n\n");
 
     setOpt(current, opt1, opt2, opt3, NULL);
     printOpt(current);
@@ -135,7 +135,7 @@ void audition(position current){
                 "The Past", 
                 "Whiplash"
             };
-            printf("Congratulations! You are now starring in %s\n", indieMovies[(int)rand()%21]);
+            printf("Congratulations! You are now starring in %s.\n", indieMovies[(int)rand()%21]);
             *(current.fame) += rand() % 500;
             *(current.networth) += rand() % 50000;
             break;
