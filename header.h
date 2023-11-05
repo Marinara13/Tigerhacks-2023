@@ -5,6 +5,7 @@
 #define BLUE "\033[34m"
 #define OFF "\e[m"
 
+#include <unistd.h>
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
