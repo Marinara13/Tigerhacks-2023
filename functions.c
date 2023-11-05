@@ -23,7 +23,7 @@ void ending(position current) {
             printf("own show called \"Keeping up with %s\". You can’t even step outside before being ", current.name);
             printf("\nblinded by the flashing lights of a few dozen paparazzi.\n");
         }
-        else if (*(current.fame) >= 2500 && *(current.networth) >= 100000) {
+        else if (*(current.fame) >= 1000 && *(current.networth) >= 100000) {
             printf("You fought tooth and nail to reach your dreams of becoming a superstar. However, ");
             printf("\nyou fell just short of anything more than a side character. You are still able ");
             printf("\nto make a decent living though, and will be comfortable for the rest of your life.\n");
