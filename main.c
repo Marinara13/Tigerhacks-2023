@@ -8,6 +8,7 @@ int main (void)
     while (*(player.age) != 22) {
         mainChoice(player);
         printStats(player);
+        randomEvent(player);
         if(*(player.fail) == 1){
             break;
         }
