@@ -2,8 +2,8 @@
 // fame is too difficult to get, expectations too high for ending/audition?
 void ending(position current) {
     if (*(current.fail) == 1) {
-        printf(" At age %d you made the worst decision imaginable you went against your fans", *(current.age));
-        printf("\n the whole time you were in jail your fans made sure you'd never get a job in the showbiz");
+        printf("At age %d you made the worst decision imaginable: you went against your fans.", *(current.age));
+        printf("\nThe whole time you were in jail, your fans made sure you'd never get a job in showbiz.\n");
         printf(RED "\n*********************GAME OVER*********************\n" OFF);
     }
     else{
