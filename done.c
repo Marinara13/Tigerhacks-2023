@@ -102,7 +102,7 @@ void setOpt(position current,char*opt1,char*opt2,char*opt3,char*opt4 ){
 }
 void printOpt(position current){
 
-    printf("Your current options are: \n\n");
+    // printf("Your current options are: \n\n");
     printf(GREEN "[1] : %s\n\n" OFF,current.opts->opt1);
     printf(GREEN "[2] : %s\n\n" OFF,current.opts->opt2);
     if(current.opts->opt3 != NULL){
@@ -132,7 +132,7 @@ void choice2(position current){
 
     int buffer;
     char eat;
-    printf("What choice will you make?\n");
+    // printf("What choice will you make?\n");
 
     scanf("%d",current.action);
 
@@ -155,7 +155,7 @@ void choice3(position current){
 
     int buffer;
     char eat;
-    printf("What choice will you make?\n");
+    // printf("What choice will you make?\n");
 
     scanf("%d",current.action);
 
@@ -179,7 +179,7 @@ void choice4(position current){
 
     int buffer;
     char eat;
-    printf("What choice will you make?\n");
+    // printf("What choice will you make?\n");
 
     scanf("%d",current.action);
 
