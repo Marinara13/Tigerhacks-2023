@@ -7,23 +7,23 @@ void ending(position current) {
         printf("\nplace, and you get barely any sleep at night because your head is full of regret.\n");
     }
     else{
-        if (*(current.fame) >= 9000 && *(current.networth) >= 100000000) {
+        if (*(current.fame) >= 9000 && *(current.networth) >= 10000000) {
             printf("You made it big! You are well renowned, and are able to retire with a well padded ");
             printf("\nsavings account. You have become the main star of many peoples’ favorite movies, ");
             printf("\nand there is not a television screen in the world that has not aired your ");
             printf("\nbeautiful, wealthy face.\n");
         }
-        else if (*(current.fame) >= 2500 && *(current.networth) >= 100000000) {
+        else if (*(current.fame) >= 2500 && *(current.networth) >= 10000000) {
             printf("Congratulations, Mr. Moneybags! You have earned enough in your career to sustain ");
             printf("\nyou through the rest of your life. While you didn’t make the biggest splash in ");
             printf("\nthe cinemas, you will certainly be content in your gold-plated private jet.\n");
         }
-        else if (*(current.fame) >= 9000 && *(current.networth) >= 1000000) {
+        else if (*(current.fame) >= 9000 && *(current.networth) >= 100000) {
             printf("Hooray! You are now the biggest name on the face of the earth. You now have your ");
             printf("own show called \"Keeping up with %s\". You can’t even step outside before being ", current.name);
             printf("\nblinded by the flashing lights of a few dozen paparazzi.\n");
         }
-        else if (*(current.fame) >= 2500 && *(current.networth) >= 1000000) {
+        else if (*(current.fame) >= 2500 && *(current.networth) >= 100000) {
             printf("You fought tooth and nail to reach your dreams of becoming a superstar. However, ");
             printf("\nyou fell just short of anything more than a side character. You are still able ");
             printf("\nto make a decent living though, and will be comfortable for the rest of your life.\n");
@@ -140,7 +140,7 @@ void audition(position current){
             *(current.networth) += rand() % 50000;
             break;
         case 2: //Some fame required unless lucky enough
-            if (*(current.fame) >= 4000 / ((float)(*(current.luck)) / 100.0)) {
+            if (*(current.fame) >= 1000 / ((float)(*(current.luck)) / 100.0)) {
                 char lowMovies[22][50] = {
                     "12 Angry Men", 
                     "Alien", 
@@ -175,7 +175,7 @@ void audition(position current){
             else printf("You were unable to secure a role for the film.\n");
             break;
         case 3: //Lots of fame required unless really lucky
-            if (*(current.fame) >= 7000 / ((float)(*(current.luck)) / 100.0)) {
+            if (*(current.fame) >= 5000 / ((float)(*(current.luck)) / 100.0)) {
                 char highMovies[22][50] = {
                     "Avatar", 
                     "Avengers: Endgame", 
