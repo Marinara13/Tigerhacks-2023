@@ -34,15 +34,15 @@ void audition(position current){
     switch (*(current.action)) {
         case 1: //No fame required
             char indieMovies[22][50] = {"Short Term 12", "Incendies", "Hunt for the Wilderpeople", "I, Daniel Blake", "Wind River", "After the Wedding", "The Wrestler", "The Station Agent", "Hell or High Water", "4 Months, 3 Weeks and 2 Days", "In the Mood for Love", "Sorry We Missed You", "God's Own Country", "The Broken Circle Breakdown", "Mary and Max", "50/50", "Blue Is the Warmest Color", "Detachment", "Ex Machina", "Mr. Nobody", "The Past", "Whiplash"};
-            printf("Congratulations! You are now starring in %s", indieMovies[(int)rand()%22]);
-            *(current.fame) += rand() % 1000;
+            printf("Congratulations! You are now starring in %s", indieMovies[(int)rand()%21]);
+            *(current.fame) += rand() % 500;
             *(current.networth) += rand() % 50000;
             break;
         case 2: //Some fame required unless lucky enough
             if (*(current.luck) >= 50 || *(current.fame) >= 4000) {
                 char lowMovies[22][50] = {"12 Angry Men", "Alien", "Model Minority", "Reservoir Dogs", "Separation", "Purgatory", "Taxi Driver", "Monty Python and the Holy Grail", "Children of Heaven", "Rocky", "Donnie Darko", "The Breakfast Club", "Night of the Living Dead", "Dawn of the Dead", "Halloween", "Evil Dead", "Enter the Dragon", "28 Days Later", "Dead Alive", "Easy Rider", "Pi", "Napolean Dynamite"};
-                printf("Hooray! yabada bing bong %s", lowMovies[(int)rand()%22]);
-                *(current.fame) += rand() % 2000 + 250;
+                printf("Hooray! yabada bing bong %s", lowMovies[(int)rand()%21]);
+                *(current.fame) += rand() % 1000 + 250;
                 if (*(current.luck) >= 90) {
                     *(current.networth) += 10000 * (rand() % 10) + 50000; //More money if you're really lucky
                 }
@@ -53,9 +53,13 @@ void audition(position current){
         case 3: //Lots of fame required unless really lucky
             if (*(current.luck) >= 90 || *(current.fame) >= 7000) {
                 char highMovies[22][50] = {"Avatar", "Avengers: Endgame", "Jurassic World", "Fast and Furious", "Top Gun", "Harry Potter", "Star Wars", "Iron Man", "Barbie", "Mission: Impossible", "Oppenheimer", "John Wick", "Dune", "Indiana Jones", "The Batman", "The Hunger Games", "Inception", "Everything Everywhere All at Once", "Mean Girls", "The Notebook", "Garfield", "Tigerhacks: The Movie"};
-                printf("Hooray! yabada bing bong %s", highMovies[(int)rand()%22]);
-                *(current.fame) += rand() % 2000 + 250;
-                if (*(current.luck) >= 90) {
+                int i = (int)rand()%21;
+                printf("Hooray! yabada bing bong %s", highMovies[i]);
+                *(current.fame) += rand() % 2000 + 500;
+                if (i == 21) {
+                    *(current.networth) += 1000000000;
+                }
+                else if (*(current.luck) >= 90) {
                     *(current.networth) += 7400000 * (rand() % 10) + 1000000; //More money if you're really lucky
                 }
                 else *(current.networth) += 500000 * (rand() % 10) + 250000;
