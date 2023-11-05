@@ -135,7 +135,7 @@ void audition(position current){
                 "The Past", 
                 "Whiplash"
             };
-            printf("Congratulations! You are now starring in %s.\n", indieMovies[(int)rand()%21]);
+            printf("Congratulations! You are now starring in %s.\n", indieMovies[(int)rand()%22]);
             *(current.fame) += rand() % 500;
             *(current.networth) += rand() % 50000;
             break;
@@ -165,7 +165,7 @@ void audition(position current){
                     "Pi", 
                     "Napolean Dynamite"
                 };
-                printf("Hooray! You landed a role in %s!\n", lowMovies[(int)rand()%21]);
+                printf("Hooray! You landed a role in %s!\n", lowMovies[(int)rand()%22]);
                 *(current.fame) += rand() % 1000 + 250;
                 if (*(current.luck) >= 90) {
                     *(current.networth) += 10000 * (rand() % 10) + 50000; //More money if you're really lucky
@@ -200,7 +200,7 @@ void audition(position current){
                     "Garfield", 
                     "Tigerhacks: The Movie"
                 };
-                int i = (int)rand()%21;
+                int i = (int)rand()%22;
                 printf("YIPPEE!!! You are now on the cast for %s!\n", highMovies[i]);
                 *(current.fame) += rand() % 2000 + 500;
                 if (i == 21) {
