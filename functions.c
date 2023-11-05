@@ -239,7 +239,7 @@ void randomEvent(position current)
     if (setLuck(current) < 70)
     {
         int eventNum = 3;
-        printf("\n******** RANDOM EVENT! ********\n\n");
+        printf(RED "\n******** RANDOM EVENT! ********\n\n" OFF);
 
         switch ((setLuck(current))%eventNum)
         {
@@ -352,7 +352,7 @@ void charity(position current)
             if ((*(current.luck)+luck/2) >= 90) // lucky
             {
                 printf("You splurge and order catering from a well-loved local restaurant.");
-                printf("\nGordon Ramsey himself hears about your dinner and decides to make an ");
+                printf(RED "\nGordon Ramsey "OFF"himself hears about your dinner and decides to make an ");
                 printf("\nappearance. When people hear he's coming, your event becomes the talk ");
                 printf("\nof the town, and you run out of food quickly. What a success!\n");
                 *(current.fame) = *(current.fame) + ((*(current.fame))*0.4);
