@@ -9,24 +9,31 @@ void ending(position current) {
     else{
         if (*(current.fame) >= 9000 && *(current.networth) >= 100000000) {
             printf("You made it big! You are well renowned, and are able to retire with a well padded ");
-            printf("\nsavings account. You have become the main star of many peoples’ favorite movies, and ");
-            printf("\nthere is not a television screen in the world that has not aired your beautiful, wealthy face.\n");
+            printf("\nsavings account. You have become the main star of many peoples’ favorite movies, ");
+            printf("\nand there is not a television screen in the world that has not aired your ");
+            printf("\nbeautiful, wealthy face.\n");
         }
         else if (*(current.fame) >= 2500 && *(current.networth) >= 100000000) {
-            printf("Congratulations, Mr. Moneybags! You have earned enough in your career to sustain you through ");
-            printf("\nthe rest of your life. While you didn’t make the biggest splash in the cinemas, you will ");
-            printf("\ncertainly be content in your gold-plated private jet.\n");
+            printf("Congratulations, Mr. Moneybags! You have earned enough in your career to sustain ");
+            printf("\nyou through the rest of your life. While you didn’t make the biggest splash in ");
+            printf("\nthe cinemas, you will certainly be content in your gold-plated private jet.\n");
         }
         else if (*(current.fame) >= 9000 && *(current.networth) >= 1000000) {
-            printf("Hooray! You are now the biggest name on the face of the earth. You now have your own show ");
-            printf("called \"Keeping up with %s\". You can’t even step outside before being blinded by the ", current.name);
-            printf("\nflashing lights of a few dozen paparazzi.\n");
+            printf("Hooray! You are now the biggest name on the face of the earth. You now have your ");
+            printf("own show called \"Keeping up with %s\". You can’t even step outside before being ", current.name);
+            printf("\nblinded by the flashing lights of a few dozen paparazzi.\n");
         }
         else if (*(current.fame) >= 2500 && *(current.networth) >= 1000000) {
-            printf("You fought tooth and nail to reach your dreams of becoming a superstar. However, you fell just short of anything more than a side character. You are still able to make a decent living though, and will be comfortable for the rest of your life.\n");
+            printf("You fought tooth and nail to reach your dreams of becoming a superstar. However, ");
+            printf("\nyou fell just short of anything more than a side character. You are still able ");
+            printf("\nto make a decent living though, and will be comfortable for the rest of your life.\n");
         }
-        else printf("You are worthless. Your attempts at stardom have led you nowhere. Now, you are but a husk of an actor. An empty promise. You work the rest of your life in a pizza place, and you get barely any sleep at night because your head is full of regret.\n");
+        else {
+            printf("You are worthless. Your attempts at stardom have led you nowhere. Now, you are but ");
+            printf("\na husk of an actor. An empty promise. You work the rest of your life in a pizza place, ");
+            printf("\nand you get barely any sleep at night because your head is full of regret.\n");
         }
+    }
 }
 
 void practice(position current){
@@ -43,17 +50,19 @@ void practice(position current){
     switch (*(current.action)) {
         case 1:
             if(luck>=50){
-                printf("You go to improv club and make a deep bond with the crew sharing connections through out the year\n");
+                printf("You go to improv club and make a deep bond with the crew, sharing connections ");
+                printf("\nthroughout the year.\n");
                 *(current.fame) += 150;
                 *(current.luck) += 5;
 
             }else if(luck >= 30){
-                printf("You have a good time at improv and increase you acting skills for the time you get to show your skills off\n");
+                printf("You have a good time at improv and increase your acting skills.\n");
                 *(current.fame) += 50;
                 *(current.luck) += 3;    
 
             }else{
-                printf("You show up to improv but you didn't get the message that they decided to move cityies.\n You lose your morale for the year and do anything else\n");
+                printf("You show up to improv, but you didn't get the message that they decided to move cities.");
+                printf("\nYou lose your morale for the year and don't do anything else.\n");
                 *(current.luck) += 10;
             }
             break;
@@ -65,19 +74,24 @@ void practice(position current){
                 *(current.networth) = *(current.networth) - 800;
             }else{
                 int loss = *(current.networth)*0.15;
-                printf("You went to fiver to pay for a voice coach. You thought you were getting a deal as it was 90 percent off.\n However you found that credit card was charged $%d and the bank won't refund you the money.",loss);
+                printf("You went to Fiver to pay for a voice coach. You thought you were getting a deal as ");
+                printf("\nit was 90 percent off. However, you found that your credit card was charged $%d ",loss);
+                printf("\nand the bank won't refund you the money.\n");
                 *(current.networth) = *(current.networth) - loss;
             }
             break;
         case 3:
             if(luck >= 60){
-                printf("You stare in the mirror and start to zone out remembering your past life as a "RED" Charlie Chaplin."OFF"\n Right then you feel a surge of skills flow in to you\n ");
+                printf("You stare in the mirror and start to zone out remembering your past life as ");
+                printf("\n"RED" Charlie Chaplin "OFF". Right then you feel a surge of skills flow into you.\n");
                 *(current.luck) += 15;
             }else if(luck >= 10){
-                printf("You pratice in front of the mirror making sure the whole room feels the emotions emanating\n");
+                printf("You practice in front of the mirror, making sure the whole room feels the emotion!\n");
                 *(current.luck) += 6;
             }else{
-                printf("You try and strike a pose and slip in to the mirror. \nYou crack the mirror and feel the impacts of the bad luck right away as you break your leg. You must wait a year for it to heal\n");
+                printf("You try and strike a pose and slip into the mirror. You crack the mirror and feel ");
+                printf("\nthe impacts of the bad luck right away as you break your leg! You must wait a year ");
+                printf("\nfor it to heal.");
             }
             break;
     }
@@ -96,14 +110,60 @@ void audition(position current){
     
     switch (*(current.action)) {
         case 1: //No fame required
-            char indieMovies[22][50] = {"Short Term 12", "Incendies", "Hunt for the Wilderpeople", "I, Daniel Blake", "Wind River", "After the Wedding", "The Wrestler", "The Station Agent", "Hell or High Water", "4 Months, 3 Weeks and 2 Days", "In the Mood for Love", "Sorry We Missed You", "God's Own Country", "The Broken Circle Breakdown", "Mary and Max", "50/50", "Blue Is the Warmest Color", "Detachment", "Ex Machina", "Mr. Nobody", "The Past", "Whiplash"};
+            char indieMovies[22][50] = {
+                "Short Term 12", 
+                "Incendies", 
+                "Hunt for the Wilderpeople", 
+                "I, Daniel Blake", 
+                "Wind River", 
+                "After the Wedding", 
+                "The Wrestler", 
+                "The Station Agent", 
+                "Hell or High Water", 
+                "4 Months, 3 Weeks and 2 Days", 
+                "In the Mood for Love", 
+                "Sorry We Missed You", 
+                "God's Own Country", 
+                "The Broken Circle Breakdown", 
+                "Mary and Max", 
+                "50/50", 
+                "Blue Is the Warmest Color", 
+                "Detachment", 
+                "Ex Machina", 
+                "Mr. Nobody", 
+                "The Past", 
+                "Whiplash"
+            };
             printf("Congratulations! You are now starring in %s\n", indieMovies[(int)rand()%21]);
             *(current.fame) += rand() % 500;
             *(current.networth) += rand() % 50000;
             break;
         case 2: //Some fame required unless lucky enough
             if (*(current.fame) >= 4000 / ((float)*(current.luck) / 100.0)) {
-                char lowMovies[22][50] = {"12 Angry Men", "Alien", "Model Minority", "Reservoir Dogs", "Separation", "Purgatory", "Taxi Driver", "Monty Python and the Holy Grail", "Children of Heaven", "Rocky", "Donnie Darko", "The Breakfast Club", "Night of the Living Dead", "Dawn of the Dead", "Halloween", "Evil Dead", "Enter the Dragon", "28 Days Later", "Dead Alive", "Easy Rider", "Pi", "Napolean Dynamite"};
+                char lowMovies[22][50] = {
+                    "12 Angry Men", 
+                    "Alien", 
+                    "Model Minority", 
+                    "Reservoir Dogs", 
+                    "Separation", 
+                    "Purgatory", 
+                    "Taxi Driver", 
+                    "Monty Python and the Holy Grail", 
+                    "Children of Heaven", 
+                    "Rocky", 
+                    "Donnie Darko", 
+                    "The Breakfast Club", 
+                    "Night of the Living Dead", 
+                    "Dawn of the Dead", 
+                    "Halloween", 
+                    "Evil Dead", 
+                    "Enter the Dragon", 
+                    "28 Days Later", 
+                    "Dead Alive", 
+                    "Easy Rider", 
+                    "Pi", 
+                    "Napolean Dynamite"
+                };
                 printf("Hooray! You landed a role in %s!\n", lowMovies[(int)rand()%21]);
                 *(current.fame) += rand() % 1000 + 250;
                 if (*(current.luck) >= 90) {
@@ -115,7 +175,30 @@ void audition(position current){
             break;
         case 3: //Lots of fame required unless really lucky
             if (*(current.fame) >= 7000 / ((float)*(current.luck) / 100.0)) {
-                char highMovies[22][50] = {"Avatar", "Avengers: Endgame", "Jurassic World", "Fast and Furious", "Top Gun", "Harry Potter", "Star Wars", "Iron Man", "Barbie", "Mission: Impossible", "Oppenheimer", "John Wick", "Dune", "Indiana Jones", "The Batman", "The Hunger Games", "Inception", "Everything Everywhere All at Once", "Mean Girls", "The Notebook", "Garfield", "Tigerhacks: The Movie"};
+                char highMovies[22][50] = {
+                    "Avatar", 
+                    "Avengers: Endgame", 
+                    "Jurassic World", 
+                    "Fast and Furious", 
+                    "Top Gun", 
+                    "Harry Potter", 
+                    "Star Wars", 
+                    "Iron Man", 
+                    "Barbie", 
+                    "Mission: Impossible", 
+                    "Oppenheimer", 
+                    "John Wick", 
+                    "Dune", 
+                    "Indiana Jones", 
+                    "The Batman", 
+                    "The Hunger Games", 
+                    "Inception", 
+                    "Everything Everywhere All at Once", 
+                    "Mean Girls", 
+                    "The Notebook", 
+                    "Garfield", 
+                    "Tigerhacks: The Movie"
+                };
                 int i = (int)rand()%21;
                 printf("YIPPEE!!! You are now on the cast for %s!\n", highMovies[i]);
                 *(current.fame) += rand() % 2000 + 500;
@@ -135,10 +218,10 @@ void audition(position current){
 }
 
 void network(position current){
-    char opt1[]=" You can spend 2000 traveling arround and prompoting yourself";
-    char opt2[]=" You get a gig to perform at a kids birthday party";
-    char opt3[]=" You apply to be on hotones but you might end up wasting your time";
-    char opt4[]=" You go with your grandma to the seinor activity center bingo night to meet some new people";
+    char opt1[]=" You spend $2000 traveling arround and promoting yourself";
+    char opt2[]=" You get a gig to perform at a kid's birthday party";
+    char opt3[]=" You apply to be on Hot Ones, but you might end up wasting your time";
+    char opt4[]=" You go with your grandma to Bingo Night to meet some new people";
 
 
     setOpt(current, opt1, opt2, opt3, opt4);
@@ -150,29 +233,36 @@ void network(position current){
     switch (*(current.action)) {
         case 1:
             if(luck >= 60){
-                printf(" When you get home after traveling you find out the New York Times has made an article about you. With the title being \"Keep your eyes on this new and upcomming star %s\"\n",current.name);
-                *(current.fame) = *(current.fame) + *(current.fame) + 1000;
+                printf("When you get home after traveling, you find out the New York Times has made ");
+                printf("\nan article about you: \"Keep Your Eyes on this New and Upcoming Star: %s\"\n",current.name);
+                *(current.fame) = *(current.fame) + *(current.fame);
             }else if(luck >= 40){
-                printf("You catch so much attraction you hear you name mentioned on a radio talk show and about how snazzy you are\n");
+                printf("You catch so much attraction, you hear your name mentioned on a radio talk ");
+                printf("\nshow while they talk about how snazzy you are!\n");
                 *(current.fame) = *(current.fame) + (10 * ( setLuck(current) + 1));
             }else if(luck <=10){
-                printf(" After all your traveling you realize you missed your mom's birthday\n -1 follower \n");
+                printf("After all your traveling you realize you missed your mom's birthday :(\n -1 follower \n");
                 *(current.fame) = *(current.fame) - 1;
             }else{
-                printf(" Because of inflation 2000 bucks only allowed you to stay locally but you get to meet some of your fans and add some more\n");
+                printf("Because of inflation, 2000 bucks only allowed you to stay locally, but you get ");
+                printf("\nto meet some of your fans and add some new ones.\n");
                 *(current.fame) = *(current.fame) + (5 * (setLuck(current)+1));
             }
             *(current.networth) = *(current.networth) - 2000;
             break;
         case 2:
             if(luck >= 75){
-                printf("When you picked up the flyer for this gig you didn't realize you would be performing as a clown for "RED" Kim k"OFF"\n you get a healthy check but nobody could tell it was you in that red wig\n");
+                printf("When you picked up the flyer for this gig, you didn't realize you would be performing ");
+                printf("\nas a clown for "RED" Kim k"OFF"! You get a healthy check, but nobody could tell ");
+                printf("\nit was you in that red wig.\n");
                 *(current.networth) = *(current.networth) + 3000;
             }else if(luck <= 10){
-                printf("You read the wrong adrress off the flyer and when you show up it's a funeral home that has a ceremony going on, they probably don't need your services\n");
+                printf("You read the wrong address off the flyer, and when you show up, it's a funeral home ");
+                printf("\nthat has a ceremony happening. They probably don't need your services...\n");
                 *(current.networth) = *(current.networth) - 30;
             }else{
-                printf("You show up to the party and dress up as Elsa. The kids are loving you and will always be a fan of yours\n");
+                printf("You show up to the party and dress up as Elsa. The kids are loving you and will ");
+                printf("\nalways be a fan of yours!\n");
                 *(current.networth) = *(current.networth) + 500;
                 *(current.fame) = *(current.fame) + 100;
             }
@@ -181,27 +271,38 @@ void network(position current){
         case 3:
             if(*(current.fame) > 7000){
                 if(luck >=40){
-                    printf("You're famous enough to get on hot ones and they ask you plenty of spicy questions. However you crush past the ghost pepper sauce without any problems. The episode aires and it's a hit");
+                    printf("You're famous enough to get on Hot Ones and they ask you plenty of spicy ");
+                    printf("\nquestions. However, you crush past the ghost pepper sauce without any ");
+                    printf("\nproblems. The episode airs and it's a hit!\n");
                     *(current.fame) += *(current.fame)*0.3 ;
                 }else{
-                    printf("You're famous enough to get on hot ones but that can only take you so far. The first sauce it Tabasco which you thought you were ready for. After one bite your face it beet red and you're hospitalized. The epsiode was never aired but the medical bills remain\n");
+                    printf("You're famous enough to get on Hot Ones, but that can only take you so far. ");
+                    printf("\nThe first sauce is Tabasco, which you thought you were ready for. After ");
+                    printf("\none bite your face is beet red and you're hospitalized. The episode was ");
+                    printf("\nnever aired, but the medical bills remain.\n");
                     *(current.networth) = *(current.networth) - 5000;
                 }
             }else if(luck >= 80){
-                printf("Today is your lucky day, the next episode was supposed to feature "RED" Tom Holland "OFF" but he got food poisoning and they had to take your application. You crush it as you aplied after years of practacing, the epsiode doesn't get a crazy amount of attention but you'll know you were able to get on the show\n");
+                printf("Today is your lucky day! The next episode was supposed to feature "RED" Tom Holland "OFF", ");
+                printf("\nbut he got food poisoning and they had to take your application. You crush it as you ");
+                printf("\napplied after years of practicing. The episode doesn't get a crazy amount of attention, ");
+                printf("\nbut you'll always know you were able to get on the show.\n");
                 *(current.fame) += *(current.fame)*0.5 ;
             }else{
-                printf("Your application didn't even make it to anyone's desk and you waste your time waiting for a year and no response\n");
+                printf("Your application didn't even make it to anyone's desk and you waste your time waiting for a year.\n");
             }
             break;
         case 4:
             if(luck >= 70){
 
-                printf("You go with your grandma to bingo night and you're enjoying yourself even though your grandma is destroying you.\n You look off to your side and see it's the one and only "RED" Nicolas Cage! "OFF" You rizz him up and get some of his contacts \n");
+                printf("You go with your grandma to Bingo Night and you're enjoying yourself even though your grandma is ");
+                printf("\ndestroying you. You look off to your side and see it's the one and only "RED" Nicolas Cage! "OFF" ");
+                printf("\nYou rizz him up and get some of his contacts.\n");
                 *(current.fame) += *(current.fame)*0.75 ;
 
             }else{
-                printf("You go to bingo with your grandma every day that year,\n sadly nothing out of the ordinary besides winning once but maybe someone interesting might show up next year\n");
+                printf("You go to bingo with your grandma every day that year. Sadly, nothing out of the ordinary happens ");
+                printf("\nbesides winning once, but maybe someone interesting might show up next year.\n");
                 *(current.fame) += *(current.fame)* 0.1 ;
                 }
             break;
@@ -213,11 +314,10 @@ void network(position current){
 void mainChoice(position current) {
     char opt1[]=" Audition for a roll";
     char opt2[]=" Go out and network ";
-    char opt3[]=" Try to practice your acting skills";
+    char opt3[]=" Go to improv club to practice";
 
 
     setOpt(current, opt1, opt2, opt3, NULL);
-    printf("What should you focus on for the next year? \n\n");
     printOpt(current);
     choice3( current);
     switch (*(current.action)) {
