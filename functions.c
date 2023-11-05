@@ -218,7 +218,7 @@ void audition(position current){
 }
 
 void network(position current){
-    char opt1[]=" You spend $2000 traveling arround and promoting yourself";
+    char opt1[]=" You spend $2000 traveling around and promoting yourself";
     char opt2[]=" You get a gig to perform at a kid's birthday party";
     char opt3[]=" You apply to be on Hot Ones, but you might end up wasting your time";
     char opt4[]=" You go with your grandma to Bingo Night to meet some new people";
