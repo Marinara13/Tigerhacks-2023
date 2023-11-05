@@ -197,7 +197,7 @@ void choice4(position current){
 }
 
 //frees the stuff
-void freePositon(position current){
+void freePosition(position current){
 
     free(current.opts);
     free(current.age);
