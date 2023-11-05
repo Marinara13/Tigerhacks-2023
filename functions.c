@@ -166,13 +166,13 @@ void network(position current){
             break;
         case 2:
             if(luck >= 75){
-                printf("When you picked up the flyer for this gig you didn't realise you would be preforming as a clown for Kim k\n you get a healthy check but nobody could tell it was you in that red wig\n");
+                printf("When you picked up the flyer for this gig you didn't realize you would be performing as a clown for "RED" Kim k"OFF"\n you get a healthy check but nobody could tell it was you in that red wig\n");
                 *(current.networth) = *(current.networth) + 3000;
             }else if(luck <= 10){
                 printf("You read the wrong adrress off the flyer and when you show up it's a funeral home that has a ceremony going on, they probably don't need your services\n");
                 *(current.networth) = *(current.networth) - 30;
             }else{
-                printf("You show up to the party and dress up as elsa. The kids are loving you and will always be a fan of yours\n");
+                printf("You show up to the party and dress up as Elsa. The kids are loving you and will always be a fan of yours\n");
                 *(current.networth) = *(current.networth) + 500;
                 *(current.fame) = *(current.fame) + 100;
             }
@@ -181,23 +181,23 @@ void network(position current){
         case 3:
             if(*(current.fame) > 7000){
                 if(luck >=40){
-                    printf("You're famous enough to get on hotones and they ask you plenty of spicy questions. However you crush past the ghost pepper sauce without any problems. The episode aires and it's a hit");
+                    printf("You're famous enough to get on hot ones and they ask you plenty of spicy questions. However you crush past the ghost pepper sauce without any problems. The episode aires and it's a hit");
                     *(current.fame) += *(current.fame)*0.3 ;
                 }else{
-                    printf("You're famous enough to get on hoteones but that can only take you so far. The first sauce it tabasco which you thought you were ready for. After one bite your face it beet red and you're hospitalized. The epsiode was never aired but the medical bills remain\n");
+                    printf("You're famous enough to get on hot ones but that can only take you so far. The first sauce it Tabasco which you thought you were ready for. After one bite your face it beet red and you're hospitalized. The epsiode was never aired but the medical bills remain\n");
                     *(current.networth) = *(current.networth) - 5000;
                 }
             }else if(luck >= 80){
-                printf("Today is your lucky day, the next episode was supposed to feature tom holland but he got food poising and they to take your application. You crush it as you aplied after years of practacing, the epsiode doesn't get a crazy amount of attention but you'll know you were able to get on the show\n");
+                printf("Today is your lucky day, the next episode was supposed to feature "RED" Tom Holland "OFF" but he got food poisoning and they had to take your application. You crush it as you aplied after years of practacing, the epsiode doesn't get a crazy amount of attention but you'll know you were able to get on the show\n");
                 *(current.fame) += *(current.fame)*0.5 ;
             }else{
-                printf("Your application didn't even make it to anyones desk and you waste your time waiting for a year and no response\n");
+                printf("Your application didn't even make it to anyone's desk and you waste your time waiting for a year and no response\n");
             }
             break;
         case 4:
             if(luck >= 70){
 
-                printf("You go with you grandma to bingo night and you're enjoying yourself even though your grandma is destroying you.\n You look off to your side and see it's the one and only Nicolas Cage! You rizz him up and get some of his contacts \n");
+                printf("You go with your grandma to bingo night and you're enjoying yourself even though your grandma is destroying you.\n You look off to your side and see it's the one and only "RED" Nicolas Cage! "OFF" You rizz him up and get some of his contacts \n");
                 *(current.fame) += *(current.fame)*0.75 ;
 
             }else{
