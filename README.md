@@ -36,4 +36,18 @@ Some of the things we learned from this project were:
 4. Randomizing integers in C
 5. Using a github repository to collaborate
 
+We also talked to a mentor, Matthew Marlow, about streamlining the final  
+project and how to submit it. Thanks, Matt!  
+
 ### Things we struggled with and possible improvements
+
+We struggled with making multiple random integers at once, as well as using scanf  
+while checking for valid input. We found ways to work around these issues,  
+but there are likely better ones that we just don't know yet.  
+
+Our organization is not that great, and in the future, it might be a better  
+idea to have each function (or small group of functions) in its own file,  
+rather than have each function in one or two files total. 
+
+Using C was a challenge, and it helped us realize the convenience of object  
+oriented languages. However, it was still fun and rewarding. 
