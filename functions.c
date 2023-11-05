@@ -102,7 +102,7 @@ void audition(position current){
             *(current.networth) += rand() % 50000;
             break;
         case 2: //Some fame required unless lucky enough
-            if (*(current.fame) >= 4000 / ((float)*(current.luck) / 100.0) {
+            if (*(current.fame) >= 4000 / ((float)*(current.luck) / 100.0)) {
                 char lowMovies[22][50] = {"12 Angry Men", "Alien", "Model Minority", "Reservoir Dogs", "Separation", "Purgatory", "Taxi Driver", "Monty Python and the Holy Grail", "Children of Heaven", "Rocky", "Donnie Darko", "The Breakfast Club", "Night of the Living Dead", "Dawn of the Dead", "Halloween", "Evil Dead", "Enter the Dragon", "28 Days Later", "Dead Alive", "Easy Rider", "Pi", "Napolean Dynamite"};
                 printf("Hooray! You landed a role in %s!\n", lowMovies[(int)rand()%21]);
                 *(current.fame) += rand() % 1000 + 250;
@@ -114,7 +114,7 @@ void audition(position current){
             else printf("You were unable to secure a role for the film\n");
             break;
         case 3: //Lots of fame required unless really lucky
-            if (*(current.fame) >= 7000 / ((float)*(current.luck) / 100.0) {
+            if (*(current.fame) >= 7000 / ((float)*(current.luck) / 100.0)) {
                 char highMovies[22][50] = {"Avatar", "Avengers: Endgame", "Jurassic World", "Fast and Furious", "Top Gun", "Harry Potter", "Star Wars", "Iron Man", "Barbie", "Mission: Impossible", "Oppenheimer", "John Wick", "Dune", "Indiana Jones", "The Batman", "The Hunger Games", "Inception", "Everything Everywhere All at Once", "Mean Girls", "The Notebook", "Garfield", "Tigerhacks: The Movie"};
                 int i = (int)rand()%21;
                 printf("YIPPEE!!! You are now on the cast for %s!\n", highMovies[i]);
