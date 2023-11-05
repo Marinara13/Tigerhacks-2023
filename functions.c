@@ -217,6 +217,7 @@ void mainChoice(position current) {
 
 
     setOpt(current, opt1, opt2, opt3, NULL);
+    printf("What should you focus on for the next year? \n\n");
     printOpt(current);
     choice3( current);
     switch (*(current.action)) {
