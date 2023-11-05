@@ -313,8 +313,8 @@ void network(position current){
 
 void mainChoice(position current) {
     char opt1[]=" Audition for a roll";
-    char opt2[]=" Go out and network ";
-    char opt3[]=" Go to improv club to practice";
+    char opt2[]=" Go out and network";
+    char opt3[]=" Hone your skills";
 
 
     setOpt(current, opt1, opt2, opt3, NULL);
