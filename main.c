@@ -3,7 +3,7 @@
 int main (void)
 {
     position player = storyIntro();
-
+    printStats(player);
     location(player);
     while (*(player.age) != 22) {
         mainChoice(player);
