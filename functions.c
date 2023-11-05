@@ -21,6 +21,61 @@ void ending(position current) {
         }
 }
 
+void practice(position current){
+
+    char opt1[]=" Go to an improv club";
+    char opt2[]=" pay 800 for a session with voice coach";
+    char opt3[]=" Pratice infront of a mirror at home";
+
+    int luck = (setLuck(current) +*(current.luck))/2;
+
+    setOpt(current, opt1, opt2, opt3, NULL);
+    printOpt(current);
+    choice3( current);
+    switch (*(current.action)) {
+        case 1:
+            if(luck>=50){
+                printf("You go to improv club and make a deep bond with the crew sharing connections through out the year\n");
+                *(current.fame) += 150;
+                *(current.luck) += 5;
+
+            }else if(luck >= 30){
+                printf("You have a good time at improv and increase you acting skills for the time you get to show your skills off\n");
+                *(current.fame) += 50;
+                *(current.luck) += 3;    
+
+            }else{
+                printf("You show up to improv but you didn't get the message that they decided to move cityies.\n You lose your morale for the year and do anything else\n");
+                *(current.luck) += 10;
+            }
+            break;
+
+        case 2:
+            if(luck >= 35){
+                printf("Your session went off great and you can feel your voice growing with beauty\n");
+                *(current.luck) += 7;
+                *(current.networth) = *(current.networth) - 800;
+            }else{
+                int loss = *(current.networth)*0.15;
+                printf("You went to fiver to pay for a voice coach. You thought you were getting a deal as it was 90 percent off.\n However you found that credit card was charged $%d and the bank won't refund you the money.",loss);
+                *(current.networth) = *(current.networth) - loss;
+            }
+            break;
+        case 3:
+            if(luck >= 60){
+                printf("You stare in the mirror and start to zone out remembering your past life as a Charlie Chaplin.\n Right then you feel a surge of skills flow in to you\n ");
+                *(current.luck) += 15;
+            }else if(luck >= 10){
+                printf("You pratice in front of the mirror making sure the whole room feels the emotions emanating\n");
+                *(current.luck) += 6;
+            }else{
+                printf("You try and strike a pose and slip in to the mirror. \nYou crack the mirror and feel the impacts of the bad luck right away as you break your leg. You must wait a year for it to heal\n");
+            }
+            break;
+    }
+
+}
+
 void audition(position current){
     char opt1[]=" Indie";
     char opt2[]=" Low Budget";
