@@ -275,7 +275,7 @@ void practice(position current){
             }else{
                 printf("You show up to improv, but you didn't get the message that they decided to move cities.");
                 printf("\nYou lose your morale for the year and don't do anything else.\n");
-                *(current.luck) += 10;
+                *(current.luck) -= 10;
             }
             break;
 
@@ -304,6 +304,7 @@ void practice(position current){
                 printf("You try and strike a pose and slip into the mirror. You crack the mirror and feel ");
                 printf("\nthe impacts of the bad luck right away as you break your leg! You must wait a year ");
                 printf("\nfor it to heal.");
+                *(current.luck) -= 10
             }
             break;
     }
