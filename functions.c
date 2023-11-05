@@ -39,8 +39,8 @@ void ending(position current) {
 void practice(position current){
 
     char opt1[]=" Go to an improv club";
-    char opt2[]=" pay 800 for a session with voice coach";
-    char opt3[]=" Pratice infront of a mirror at home";
+    char opt2[]=" Pay $800 for a session with voice coach";
+    char opt3[]=" Practice in front of a mirror at home";
 
     int luck = (setLuck(current) +*(current.luck))/2;
 
@@ -69,7 +69,7 @@ void practice(position current){
 
         case 2:
             if(luck >= 35){
-                printf("Your session went off great and you can feel your voice growing with beauty\n");
+                printf("Your session went off great and you can feel your voice growing with beauty.\n");
                 *(current.luck) += 7;
                 *(current.networth) = *(current.networth) - 800;
             }else{
@@ -82,7 +82,7 @@ void practice(position current){
             break;
         case 3:
             if(luck >= 60){
-                printf("You stare in the mirror and start to zone out remembering your past life as ");
+                printf("You stare in the mirror and start to zone out, remembering your past life as ");
                 printf("\n"RED" Charlie Chaplin "OFF". Right then you feel a surge of skills flow into you.\n");
                 *(current.luck) += 15;
             }else if(luck >= 10){
@@ -171,7 +171,7 @@ void audition(position current){
                 }
                 else *(current.networth) += 20000 * (rand() % 10) + 50000;
             }
-            else printf("You were unable to secure a role for the film\n");
+            else printf("You were unable to secure a role for the film.\n");
             break;
         case 3: //Lots of fame required unless really lucky
             if (*(current.fame) >= 7000 / ((float)*(current.luck) / 100.0)) {
@@ -210,7 +210,7 @@ void audition(position current){
                 }
                 else *(current.networth) += 500000 * (rand() % 10) + 250000;
             }
-            else printf("You were unable to secure a role for the film\n");
+            else printf("You were unable to secure a role for the film.\n");
             break;
     }
 
@@ -253,7 +253,7 @@ void network(position current){
         case 2:
             if(luck >= 75){
                 printf("When you picked up the flyer for this gig, you didn't realize you would be performing ");
-                printf("\nas a clown for "RED" Kim k"OFF"! You get a healthy check, but nobody could tell ");
+                printf("\nas a clown for "RED" Kim K"OFF"! You get a healthy check, but nobody could tell ");
                 printf("\nit was you in that red wig.\n");
                 *(current.networth) = *(current.networth) + 3000;
             }else if(luck <= 10){
