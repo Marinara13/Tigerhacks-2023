@@ -209,13 +209,12 @@ void freePosition(position current){
     free(current.fail);
 
 }
-
 //prints the current player stats
 void printStats(position current) {
     
-    printf("\nAge: %d\n", *(current.age));
-    printf("Fame: %d\n", *(current.fame));
-    printf("Net Worth: %d\n", *(current.networth));
-    printf("Your Luck is %d\n\n",*(current.luck));
+    printf(RED "\nAge: %d\n" OFF, *(current.age));
+    printf(RED "Fame: %d\n" OFF, *(current.fame));
+    printf(RED "Net Worth: %d\n" OFF, *(current.networth));
+    printf(RED "Your Luck is %d\n\n" OFF,*(current.luck));
     
 }
