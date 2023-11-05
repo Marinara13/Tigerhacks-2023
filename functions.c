@@ -140,7 +140,7 @@ void audition(position current){
             *(current.networth) += rand() % 50000;
             break;
         case 2: //Some fame required unless lucky enough
-            if (*(current.fame) >= 4000 / ((float)*(current.luck) / 100.0)) {
+            if (*(current.fame) >= 4000 / ((float)(*(current.luck)) / 100.0)) {
                 char lowMovies[22][50] = {
                     "12 Angry Men", 
                     "Alien", 
@@ -175,7 +175,7 @@ void audition(position current){
             else printf("You were unable to secure a role for the film.\n");
             break;
         case 3: //Lots of fame required unless really lucky
-            if (*(current.fame) >= 7000 / ((float)*(current.luck) / 100.0)) {
+            if (*(current.fame) >= 7000 / ((float)(*(current.luck)) / 100.0)) {
                 char highMovies[22][50] = {
                     "Avatar", 
                     "Avengers: Endgame", 
