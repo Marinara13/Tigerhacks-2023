@@ -168,3 +168,137 @@ void mainChoice(position current) {
     *(current.age) = updateAge + 1;
 }
 
+void randomEvent(position current)
+{
+    if (setLuck(current) > 70)
+    {
+        int eventNum = 3;
+        printf("\n******** RANDOM EVENT! ********\n\n");
+
+        switch ((setLuck(current))%eventNum)
+        {
+            case 0:
+                twitter(current);
+                break;
+            case 1:
+                charity(current);
+                break;
+            case 2:
+                ad(current);
+                break;
+        }
+    }
+}
+
+void twitter(position current)
+{
+    printf("You tweeted what you thought was a completely non-offensive image, but it turns out it had ");
+    printf("\nsome... negative connotations you weren't aware of. Fans and haters alike are dragging you")
+    printf("\n in the quote retweets! How do you rectify the situation?\n");
+    
+    char opt1[] = "Sincerely apologize and ensure your faithful fans that this will NOT happen again";
+    char opt2[] = "Dox the people calling you out";
+    
+    setOpt(current, opt1, opt2, NULL, NULL);
+    printOpt(current);
+    choice2(current);
+
+    int luck = setLuck(current);
+
+    switch(*(current.action))
+    {
+        case 1: // nice guy
+            if (luck <= 10)
+            {
+                printf("The netizens decided your apology was bogus, and were only engraged further!");
+                printf("\nYour career is going to take a hit after this...\n");
+                *(current.fame) = *(current.fame) - ((*(current.fame))*0.3);
+            }
+            else if (luck >= 80)
+            {
+                printf("Wow! Twitter users were blown away by your thoughtful apology, and you ");
+                printf("\neven gain some new followers who admired your vulnerability.\n");
+                *(current.fame) = *(current.fame) + ((*(current.fame))*0.3);
+            }
+            else 
+            {
+                printf("Your apology has calmed the waters... for now.\n");
+            }
+            break;
+        case 2: // dox
+            if (luck >= 90)
+            {
+                printf("Surprisingly, a good amount of users are impressed by your technological ");
+                printf("\nprowess and mercilessness. You gain a few new followers.\n");
+                *(current.fame) = *(current.fame) + ((*(current.fame))*0.1);
+            }
+            else
+            {
+                printf("You're not sure why you ever thought that was a good idea. The police ");
+                printf("\nare able to trace your account and you spend a year in jail. ");
+                printf("\nOnce you get out, you find your wallet empty and your fans have left.\n");
+                *(current.fail) = 1;
+            }
+            break;
+    }
+}
+
+void charity(position current)
+{
+    printf("You've decided to host a charity event to show the public how ");
+    printf("\ngenerous and down-to-earth you are. What kind of event do ");
+    printf("\nyou want to host?\n");
+    
+    char opt1[] = "An animal adoption fair";
+    char opt2[] = "A free dinner for unhoused people";
+    
+    setOpt(current, opt1, opt2, NULL, NULL);
+    printOpt(current);
+    choice2(current);
+
+    int luck = setLuck(current);
+
+    switch(*(current.action))
+    {
+        case 1: // animals
+            if (luck <= 10) // unlucky
+            {
+                printf("Fluffy, a typically loving pitbull, has bit a child's finger off!");
+                printf("\nThe parents are furious with you and ask how you could allow ");
+                printf("\nsuch a dangerous animal at a family event. You feel terrible and apologize, ");
+                printf("\noffering to pay for their child's hospital bills. Many people leave the event ");
+                printf("\nthinking less of you.\n");
+                *(current.fame) = *(current.fame) - ((*(current.fame))*0.5);
+                *(current.networth) = *(current.networth) - 7000;
+            }
+            else // default
+            {
+                printf("The event goes by without a hitch, and all the animals get adopted!");
+                printf("\nYou gain some new fans for being such a stand-up citizen, but ");
+                printf("\nyour bank account takes a small hit after catering the fair.\n");
+                *(current.fame) = *(current.fame) + ((*(current.fame))*0.2);
+                *(current.networth) = *(current.networth) - 300;
+            }
+            break;
+        case 2: // dinner
+            if (luck >= 90) // lucky
+            {
+                printf("");
+                printf("\n\n");
+                *(current.fame) = *(current.fame) + ((*(current.fame))*0.1);
+            }
+            else
+            {
+                printf("");
+                printf("\n");
+                printf("\n\n");
+    
+            }
+            break;
+    }
+}
+
+void ad(position current)
+{
+    
+}
