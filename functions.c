@@ -145,7 +145,7 @@ void network(position current){
     printOpt(current);
     choice4( current);
 
-    int luck = setLuck(current);
+    int luck = (setLuck(current) +*(current.luck))/2;
 
     switch (*(current.action)) {
         case 1:
