@@ -219,8 +219,7 @@ void mainChoice(position current) {
             network(current);
             break;
         case 3:
-            *(current.luck) += 10;
-            printf("Hopefully someone will see you efforts\n");
+            practice(current);
             break;
     }
     int updateAge = *(current.age);
