@@ -228,7 +228,7 @@ void mainChoice(position current) {
 
 void randomEvent(position current)
 {
-    if (setLuck(current) > 70)
+    if (setLuck(current) < 70)
     {
         int eventNum = 3;
         printf("\n******** RANDOM EVENT! ********\n\n");
@@ -245,13 +245,15 @@ void randomEvent(position current)
                 ad(current);
                 break;
         }
+
+        printStats(current);
     }
 }
 
 void twitter(position current)
 {
     printf("You tweeted what you thought was a completely non-offensive image, but it turns out it had ");
-    printf("\nsome... negative connotations you weren't aware of. Fans and haters alike are dragging you")
+    printf("\nsome... negative connotations you weren't aware of. Fans and haters alike are dragging you");
     printf("\n in the quote retweets! How do you rectify the situation?\n");
     
     char opt1[] = "Sincerely apologize and ensure your faithful fans that this will NOT happen again";
@@ -266,13 +268,13 @@ void twitter(position current)
     switch(*(current.action))
     {
         case 1: // nice guy
-            if (luck <= 10)
+            if ((*(current.luck)+luck/2) <= 10)
             {
                 printf("The netizens decided your apology was bogus, and were only engraged further!");
                 printf("\nYour career is going to take a hit after this...\n");
                 *(current.fame) = *(current.fame) - ((*(current.fame))*0.3);
             }
-            else if (luck >= 80)
+            else if ((*(current.luck)+luck/2) >= 80)
             {
                 printf("Wow! Twitter users were blown away by your thoughtful apology, and you ");
                 printf("\neven gain some new followers who admired your vulnerability.\n");
@@ -284,7 +286,7 @@ void twitter(position current)
             }
             break;
         case 2: // dox
-            if (luck >= 90)
+            if ((*(current.luck)+luck/2) >= 90)
             {
                 printf("Surprisingly, a good amount of users are impressed by your technological ");
                 printf("\nprowess and mercilessness. You gain a few new followers.\n");
@@ -319,7 +321,7 @@ void charity(position current)
     switch(*(current.action))
     {
         case 1: // animals
-            if (luck <= 10) // unlucky
+            if ((*(current.luck)+luck/2) <= 10) // unlucky
             {
                 printf("Fluffy, a typically loving pitbull, has bit a child's finger off!");
                 printf("\nThe parents are furious with you and ask how you could allow ");
@@ -339,19 +341,92 @@ void charity(position current)
             }
             break;
         case 2: // dinner
-            if (luck >= 90) // lucky
+            if ((*(current.luck)+luck/2) >= 90) // lucky
             {
-                printf("");
-                printf("\n\n");
-                *(current.fame) = *(current.fame) + ((*(current.fame))*0.1);
+                printf("You splurge and order catering from a well-loved local restaurant.");
+                printf("\nGordon Ramsey himself hears about your dinner and decides to make an ");
+                printf("\nappearance. When people hear he's coming, your event becomes the talk ");
+                printf("\nof the town, and you run out of food quickly. What a success!\n");
+                *(current.fame) = *(current.fame) + ((*(current.fame))*0.4);
+                *(current.networth) = *(current.networth) - 5000;
             }
-            else
+            else if ((*(current.luck)+luck/2) <= 10) // unlucky
             {
-                printf("");
-                printf("\n");
-                printf("\n\n");
-    
+                printf("You decided to take a risk and save some cash by getting the food from ");
+                printf("\na cheap, shady diner. Bad move! Everyone who ate the chicken alfredo ");
+                printf("\ngot food poisoning, and some even threaten to sue. You end up losing ");
+                printf("\nthe money you saved by paying them hush money, and you lose a few fans.\n");
+                *(current.fame) = *(current.fame) - ((*(current.fame))*0.05);
+                *(current.networth) = *(current.networth) - 50000;
+            }
+            else // default
+            {
+                printf("The dinner goes by smoothly, and many people come up to you to express ");
+                printf("\ntheir gratitude. You lost a bit of money putting on the event, but your ");
+                printf("\npublic image improves and you feel good about the work you've done.\n");
+                *(current.fame) = *(current.fame) + ((*(current.fame))*0.2);
+                *(current.networth) = *(current.networth) - 3000;
             }
             break;
     }
+}
+
+void ad(position current)
+{
+    printf("You just landed a sponsorship! ");
+    printf("\n");
+    printf("\n\n");
+    
+    char opt1[] = "Follow the brand's directions to a tee and ignore your actor's instinct";
+    char opt2[] = "Improvise! They'll thank you afterwards";
+    
+    setOpt(current, opt1, opt2, NULL, NULL);
+    printOpt(current);
+    choice2(current);
+
+    int luck = setLuck(current);
+
+    switch(*(current.action))
+    {
+        case 1: // obey
+            if ((*(current.luck)+luck/2) >= 90) // lucky
+            {
+                printf("You were exactly what they were looking for! Your ability to follow direction ");
+                printf("\nmade for the perfect commercial. You and their product are on every billboard in ");
+                printf("\nAmerica: \"%s approved!\"\n", current.name);
+                *(current.fame) *= 1.7;
+                *(current.networth) *= 1.2;
+            }
+            else if ((*(current.luck)+luck/2) <= 10) // unlucky
+            {
+                printf("Even though you did exactly as they asked, the brand hated your commercial.");
+                printf("\nThey said you were \"stiff\" and \"disinteresed\". The nerve! You take ");
+                printf("\nyour measly paycheck, but your poor performance doesn't make the news.\n");
+                *(current.networth) += 1000;
+            }
+            else // default
+            {
+                printf("The brand is pleased with your performance. The commercial airs, and ");
+                printf("\na few more people get to see your face. The paycheck wasn't too shabby either!\n");
+                *(current.fame) *= 1.1;
+                *(current.networth) *= 1.1;
+            }
+            break;
+        case 2: // improvise
+            if ((*(current.luck)+luck/2) >= 90) // lucky
+            {
+                printf("The brand execs were surprised by your boldness at first, but your fresh ");
+                printf("\nideas and witty comments soon have the whole studio in stitches! They ");
+                printf("\nair the commercial and it becomes a viral sensation.\n");
+                *(current.fame) *= 1.3;
+                *(current.networth) *= 1.2;
+            }
+            else // default
+            {
+                printf("As it turns out, the brand execs didn't like your interpretive dance and song.");
+                printf("\nThey're so offended that they kick you out of the studio, meaning you don't ");
+                printf("\nget paid and no one gets to witness your creative genius on cable TV.\n");
+            }
+            break;
+    }  
 }
