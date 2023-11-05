@@ -104,7 +104,7 @@ void audition(position current){
     char opt2[]=" Low Budget";
     char opt3[]=" High Budget";
 
-    printf("What type of role would you like to audition for?\n");
+    printf("What type of role would you like to audition for?\n\n");
     setOpt(current, opt1, opt2, opt3, NULL);
     printOpt(current);
     choice3( current);
