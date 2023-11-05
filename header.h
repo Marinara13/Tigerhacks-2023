@@ -33,7 +33,10 @@ void location(position current);
 void audition(position current);
 void mainChoice(position current);
 void ending(position current);
-
+void twitter(position current);
+void charity(position current);
+void ad(position current);
+void randomEvent(position current);
 
 //all set up code
 position createPlayer();
