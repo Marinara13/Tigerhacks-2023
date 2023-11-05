@@ -45,7 +45,7 @@ void printOpt(position current);
 void choice2(position current);
 void choice3(position current);
 void choice4(position current);
-void freePositon(position current);
+void freePosition(position current);
 void printStats(position current);
 int setLuck(position current);
 #endif
