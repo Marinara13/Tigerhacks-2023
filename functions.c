@@ -43,6 +43,7 @@ void practice(position current){
     char opt3[]=" Practice in front of a mirror at home";
 
     int luck = (setLuck(current) +*(current.luck))/2;
+    printf("How would you like to practice\n\n");
 
     setOpt(current, opt1, opt2, opt3, NULL);
     printOpt(current);
@@ -223,7 +224,7 @@ void network(position current){
     char opt3[]=" You apply to be on Hot Ones, but you might end up wasting your time";
     char opt4[]=" You go with your grandma to Bingo Night to meet some new people";
 
-
+    printf("How will you increase your fame?\n\n");
     setOpt(current, opt1, opt2, opt3, opt4);
     printOpt(current);
     choice4( current);
