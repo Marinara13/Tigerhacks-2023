@@ -327,11 +327,13 @@ void mainChoice(position current) {
             break;
         case 2:
             network(current);
+            
             break;
         case 3:
             practice(current);
             break;
     }
+    sleep(3);
     int updateAge = *(current.age);
     *(current.age) = updateAge + 1;
 }
