@@ -215,7 +215,7 @@ void printStats(position current) {
     
     printf(RED "\nAge: %d\n" OFF, *(current.age));
     printf(RED "Fame: %d\n" OFF, *(current.fame));
-    printf(RED "Net Worth: %d\n" OFF, *(current.networth));
+    printf(RED "Net Worth: $%d\n" OFF, *(current.networth));
     printf(RED "Your Luck is %d\n\n" OFF,*(current.luck));
     
 }
