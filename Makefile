@@ -8,7 +8,7 @@ default: a.out
 	@echo Compiling $^ 
 	@$(CC) $(CFLAGS) $^
 
-a.out : main.o functions.o done.o
+a.out : main.o functions.o 
 	@echo Linking $@ 
 	@$(CC) $^ $(LDFLAGS) -o $@
 
