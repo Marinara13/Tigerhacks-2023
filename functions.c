@@ -337,7 +337,7 @@ void mainChoice(position current) {
 
 void randomEvent(position current)
 {
-    if (setLuck(current) < 70)
+    if (setLuck(current) >= 70)
     {
         int eventNum = 3;
         printf(RED "\n******** RANDOM EVENT! ********\n\n" OFF);
