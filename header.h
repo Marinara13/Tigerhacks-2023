@@ -1,5 +1,9 @@
 #ifndef _HEADER_H
 #define _HEADER_H
+#define GREEN "\033[32m"
+#define RED "\033[31m"
+#define BLUE "\033[34m"
+#define OFF "\e[m"
 
 #include <stdio.h>
 #include <string.h>
