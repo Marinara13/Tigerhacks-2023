@@ -151,7 +151,7 @@ void network(position current){
         case 1:
             if(luck >= 60){
                 printf(" When you get home after traveling you find out the New York Times has made an article about you. With the title being \"Keep your eyes on this new and upcomming star %s\"\n",current.name);
-                *(current.fame) = *(current.fame) + *(current.fame);
+                *(current.fame) = *(current.fame) + *(current.fame) + 1000;
             }else if(luck >= 40){
                 printf("You catch so much attraction you hear you name mentioned on a radio talk show and about how snazzy you are\n");
                 *(current.fame) = *(current.fame) + (10 * ( setLuck(current) + 1));
