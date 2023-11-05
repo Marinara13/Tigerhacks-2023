@@ -47,7 +47,9 @@ but there are likely better ones that we just don't know yet.
 
 Our organization is not that great, and in the future, it might be a better  
 idea to have each function (or small group of functions) in its own file,  
-rather than have each function in one or two files total. 
+rather than have each function in one or two files total.  
+It would also benefit us to have better documentation in our code,  
+however we ran out of time.
 
 Using C was a challenge, and it helped us realize the convenience of object  
-oriented languages. However, it was still fun and rewarding. 
+oriented languages. However, it was still fun and rewarding.  
