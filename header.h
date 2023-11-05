@@ -4,6 +4,7 @@
 #define RED "\033[31m"
 #define BLUE "\033[34m"
 #define OFF "\e[m"
+#define YELLOW "\033[33m"
 
 #include <unistd.h>
 #include <stdio.h>
