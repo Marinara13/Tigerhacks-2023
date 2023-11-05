@@ -297,8 +297,3 @@ void charity(position current)
             break;
     }
 }
-
-void ad(position current)
-{
-    
-}
