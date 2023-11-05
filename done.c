@@ -103,17 +103,18 @@ void setOpt(position current,char*opt1,char*opt2,char*opt3,char*opt4 ){
 void printOpt(position current){
 
     printf("Your current options are: \n\n");
-    printf("[1] : %s\n\n",current.opts->opt1);
-    printf("[2] : %s\n\n",current.opts->opt2);
+    printf(GREEN "[1] : %s\n\n" OFF,current.opts->opt1);
+    printf(GREEN "[2] : %s\n\n" OFF,current.opts->opt2);
     if(current.opts->opt3 != NULL){
-        printf("[3] : %s\n\n",current.opts->opt3);
+        printf(GREEN "[3] : %s\n\n" OFF,current.opts->opt3);
     }
     if(current.opts->opt4 != NULL){
-    printf("[4] : %s\n\n",current.opts->opt4);
+    printf(GREEN "[4] : %s\n\n" OFF,current.opts->opt4);
     }
     
 
 }
+
 
 // returns a random integer between 0 and 100
 int setLuck(position current)
@@ -145,7 +146,7 @@ void choice2(position current){
        }
     }
 
-    printf("\n************************************************************************\n\n");
+    printf(BLUE "\n******************************************************************************************\n\n" OFF);
 
 }
 
@@ -168,7 +169,7 @@ void choice3(position current){
        }
     }
 
-    printf("\n***********************************************************************\n\n");
+    printf(BLUE "\n******************************************************************************************\n\n" OFF);
 
 }
 
@@ -192,7 +193,7 @@ void choice4(position current){
        }
     }
 
-    printf("\n***********************************************************************\n\n");
+    printf(BLUE "\n******************************************************************************************\n\n" OFF);
 
 }
 
