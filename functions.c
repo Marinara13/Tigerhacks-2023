@@ -71,7 +71,7 @@ void practice(position current){
             break;
         case 3:
             if(luck >= 60){
-                printf("You stare in the mirror and start to zone out remembering your past life as a Charlie Chaplin.\n Right then you feel a surge of skills flow in to you\n ");
+                printf("You stare in the mirror and start to zone out remembering your past life as a "RED" Charlie Chaplin."OFF"\n Right then you feel a surge of skills flow in to you\n ");
                 *(current.luck) += 15;
             }else if(luck >= 10){
                 printf("You pratice in front of the mirror making sure the whole room feels the emotions emanating\n");
