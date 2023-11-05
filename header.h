@@ -30,6 +30,8 @@ typedef struct{
 //story code
 position storyIntro();
 void location(position current);
+void network(position current);
+void practice(position current);
 void audition(position current);
 void mainChoice(position current);
 void ending(position current);
