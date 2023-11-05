@@ -360,6 +360,7 @@ void randomEvent(position current)
         }
 
         printStats(current);
+        sleep(3);
     }
 }
 
