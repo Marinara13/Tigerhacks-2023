@@ -2,9 +2,9 @@
 // fame is too difficult to get, expectations too high for ending/audition?
 void ending(position current) {
     if (*(current.fail) == 1) {
-        printf("You are worthless. Your attempts at stardom have led you nowhere. Now, you are but ");
-        printf("\na husk of an actor. An empty promise. You work the rest of your life in a pizza ");
-        printf("\nplace, and you get barely any sleep at night because your head is full of regret.\n");
+        printf(" At age %d you made the worst decision imaginable you went against your fans", *(current.age));
+        printf("\n the whole time you were in jail your fans made sure you'd never get a job in the showbiz");
+        printf(RED "\n*********************GAME OVER*********************\n" OFF);
     }
     else{
         if (*(current.fame) >= 9000 && *(current.networth) >= 10000000) {
