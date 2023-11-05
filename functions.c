@@ -1,5 +1,5 @@
 #include "header.h"
-
+// fame is too difficult to get, expectations too high for ending/audition?
 void ending(position current) {
     if (*(current.fail) == 1) {
         printf("You are worthless. Your attempts at stardom have led you nowhere. Now, you are but ");
