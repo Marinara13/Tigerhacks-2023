@@ -117,7 +117,7 @@ void network(position current){
                     printf("You're famous enough to get on hotones and they ask you plenty of spicy questions. However you crush past the ghost pepper sauce without any problems. The episode aires and it's a hit");
                     *(current.fame) += *(current.fame)*0.3 ;
                 }else{
-                    printf("You're famous enough to get on hoteones but that can only take you so far. The first sauce it tabasco which you thought you were ready for. After one bite your face it beet red and you're hospitalized. The epsiode was never aired but the medical bills remain\n")
+                    printf("You're famous enough to get on hoteones but that can only take you so far. The first sauce it tabasco which you thought you were ready for. After one bite your face it beet red and you're hospitalized. The epsiode was never aired but the medical bills remain\n");
                     *(current.networth) = *(current.networth) - 5000;
                 }
             }else if(luck >= 80){
@@ -127,19 +127,20 @@ void network(position current){
                 printf("Your application didn't even make it to anyones desk and you waste your time waiting for a year and no response\n");
             }
             break;
-        case 4;
+        case 4:
             if(luck >= 70){
 
-                printf("You go with you grandma to bingo night and you're enjoying yourself even though your grandma is destroying you. You look off to your side and see it's the one and only Nicolas Cage! You rizz him up and get some of his contacts \n");
+                printf("You go with you grandma to bingo night and you're enjoying yourself even though your grandma is destroying you.\n You look off to your side and see it's the one and only Nicolas Cage! You rizz him up and get some of his contacts \n");
                 *(current.fame) += *(current.fame)*0.75 ;
 
             }else{
-                printf("You go to bingo with your grandma every day that year, sadly nothing out of the ordinary besides winning once but maybe someone interesting might show up next year\n"){
+                printf("You go to bingo with your grandma every day that year,\n sadly nothing out of the ordinary besides winning once but maybe someone interesting might show up next year\n");
                 *(current.fame) += *(current.fame)* 0.1 ;
                 }
-            }
             break;
-    } 
+    }
+
+    
 }
 
 void mainChoice(position current) {
