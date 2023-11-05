@@ -7,7 +7,7 @@ int main (void)
     printStats(player);
     sleep(3);
     location(player);
-    while (*(player.age) != 22) {
+    while (*(player.age) != 30) {
         mainChoice(player);
         printStats(player);
         sleep(3);
