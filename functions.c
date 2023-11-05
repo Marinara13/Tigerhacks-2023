@@ -219,10 +219,10 @@ void audition(position current){
 }
 
 void network(position current){
-    char opt1[]=" You spend $2000 traveling around and promoting yourself";
-    char opt2[]=" You get a gig to perform at a kid's birthday party";
-    char opt3[]=" You apply to be on Hot Ones, but you might end up wasting your time";
-    char opt4[]=" You go with your grandma to Bingo Night to meet some new people";
+    char opt1[]=" Spend $2000 traveling around and promoting yourself";
+    char opt2[]=" Get a gig to perform at a kid's birthday party";
+    char opt3[]=" Apply to be on Hot Ones, but you might end up wasting your time";
+    char opt4[]=" Go with your grandma to Bingo Night to meet some new people";
 
     printf("How will you increase your fame?\n\n");
     setOpt(current, opt1, opt2, opt3, opt4);
