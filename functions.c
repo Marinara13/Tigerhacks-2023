@@ -30,6 +30,7 @@ position createPlayer(){
     *age = 18;
     *luckCounter = 1;
     player.luckCounter = luckCounter;
+    *fame = 0;
 
     *luck = setLuck(player);
     *networth = 500 * (*luck);
